@@ -72,13 +72,25 @@ $('.team_member_img').hover(function() {
 new WOW().init();  
 /* end Animate CSS */
 
-$(window).resize(function() {
+/* begin Blog DOM */
+ $(window).resize(function() {
   if($(window).width() < 992){
     $('.change_before').prependTo('.change_block');
   } else{
     $('.change_before').appendTo('.change_block');
   }
-});
+}); 
+/* end Blog DOM */
+
+/* begin Footer DOM */
+ $(window).resize(function() {
+  if($(window).width() < 560){
+    $('.terms').prependTo('.header_second');
+  } else{
+    $('.terms').appendTo('.header_second');
+  }
+}); 
+/* end Footer DOM */
 
 /* begin Back to Top Button */
 	if ($('#back-to-top').length) {

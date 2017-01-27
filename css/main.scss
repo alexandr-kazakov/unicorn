@@ -496,6 +496,9 @@ section.facts_numbers{
 			.facts_numbers_block{
 				padding: 19px 0;
 				letter-spacing: 1.7px;
+			&:hover p:after{
+				background-color: $color_red;
+			}		
 				p{
 					position: relative;
 					font-size: 27px;
@@ -512,10 +515,7 @@ section.facts_numbers{
 						right: 0;
 						bottom:-16px;
 						transition: 0.5s;
-				   }
-				  &:hover:after{
-					  background-color: $color_red;
-				  }					
+				   }			
 				}
 				h3{
 					font-size: 24px;	
@@ -647,7 +647,11 @@ section.blog_next_post{
 		    top: 0;
 		    left: 0;
 		    margin: auto;
+		    transition: 0.5s;
 			}
+			&:hover:before{
+		    background-color: $color_red;
+		  }
 			h5{
 				color: #555555;
 				font-size: 14px;
@@ -663,6 +667,7 @@ section.blog_next_post{
 				letter-spacing: 0.1px;
 				a{
 					color: #222222;
+					text-decoration: none;
 				}
 			}
 		}
