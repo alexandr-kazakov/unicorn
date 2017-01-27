@@ -45,9 +45,8 @@ var mixer = mixitup('.mixitup_container',{
  $('.slick_slider_portfolio').slick({ 
     arrows: false,
     dots: true,
-    slidesToShow: 3, 
-    slidesToScroll: 1, 
-    infinite: true,
+    slidesToShow: 6, 
+    slidesToScroll: 2, 
     variableWidth: true
       });    
 /* end Slick Slider Portfolio */
@@ -62,6 +61,24 @@ var mixer = mixitup('.mixitup_container',{
     pager: false
   });
 /* end bxSlider Slider Blog Post Next Section */
+
+/* begin Animate CSS */
+$('.team_member_img').hover(function() {
+    $(this).addClass('animated bounce');
+}, function() {
+    $(this).removeClass('animated bounce');
+});
+  
+new WOW().init();  
+/* end Animate CSS */
+
+$(window).resize(function() {
+  if($(window).width() < 992){
+    $('.change_before').prependTo('.change_block');
+  } else{
+    $('.change_before').appendTo('.change_block');
+  }
+});
 
 /* begin Back to Top Button */
 	if ($('#back-to-top').length) {
